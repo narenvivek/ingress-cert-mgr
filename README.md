@@ -182,3 +182,20 @@ tls.key:  1679 bytes
 ```
 
 The presence of `tls.crt` and `tls.key` confirms that the cert is issued correctly.
+
+# Clean-up
+
+## Delete cluster artifacts
+
+`kubectl delete -f kube-manifests\01-App -f kube-manifests\02-Cert-Manager-Issuer -f kube-manifests\03-Ingress`
+
+## Delete Ingress controller and cert-manager using Helm
+
+```
+helm uninstall ing-ctrl
+helm uninstall cert-manager
+```
+
+## Delete Cluster (Azure)
+`az aks delete --name <cluster-name> --resource-group <resource-group-name>`
+`az group delete --resource-group <resource-group-name>`
