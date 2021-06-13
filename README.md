@@ -183,6 +183,10 @@ tls.key:  1679 bytes
 
 The presence of `tls.crt` and `tls.key` confirms that the cert is issued correctly.
 
+## Test whether TLS cert is correctly applied
+
+`curl https://azurekubed.com` should render the content without TLS errors and without using `-k` (ignore-insecure) option. You could verify that the cert is applied by launching the website through your browser without any warnings.
+
 # Clean-up
 
 ## Delete cluster artifacts
