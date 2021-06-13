@@ -3,7 +3,7 @@ This guide assumes that you have already created a K8s cluster somethere. I have
 
 The exceptions are:
 
-* Local K8s cluster that you might have deployed with your `Docker Desktop`
+* Local K8s cluster that you might have deployed with your `Docker Desktop` will NOT work
 * Cert Manager portion of the description below will also NOT work for private clusters (E.g.: clusters behind Azure Private Endpoint or behind Azure App Gateway that already has an edge cert deployed)
 
 You will need the following:
